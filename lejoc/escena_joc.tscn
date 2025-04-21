@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkvnj4cs6k2up"]
+
+[ext_resource type="PackedScene" uid="uid://u0lq413clgen" path="res://fons_cel.tscn" id="1_b7kv0"]
+[ext_resource type="Script" uid="uid://dpnst8qgl05jk" path="res://escena_joc.gd" id="1_yx6f5"]
+[ext_resource type="PackedScene" uid="uid://b0bf13hh61by0" path="res://personatge.tscn" id="2_yx6f5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_yx6f5")
+
+[node name="Node2D" parent="." instance=ExtResource("1_b7kv0")]
+
+[node name="Personatge" parent="." instance=ExtResource("2_yx6f5")]
+position = Vector2(833, 577)

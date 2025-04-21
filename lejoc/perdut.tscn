@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccxy6cmtiyeny"]
+
+[ext_resource type="Script" uid="uid://qv5wfftnj6cm" path="res://timer.gd" id="1_36ras"]
+
+[node name="perdut" type="Node"]
+script = ExtResource("1_36ras")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2472.0
+offset_top = 2587.0
+offset_right = -2423.0
+offset_bottom = 2615.0
+theme_override_font_sizes/font_size = 20
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 40.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

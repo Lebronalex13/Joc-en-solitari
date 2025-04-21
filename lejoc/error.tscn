@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://chrbwcq6nv3vm"]
+
+[ext_resource type="Texture2D" uid="uid://dpwnkopvd77k3" path="res://360_F_524014970_oTHyQ4HW2uePcTikr2E8Z84XTwu9vSdM.jpg" id="1_3k68v"]
+[ext_resource type="Script" uid="uid://cfpeb22i8n4tc" path="res://error.gd" id="1_c41df"]
+
+[node name="error" type="Node2D"]
+script = ExtResource("1_c41df")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 119.0
+offset_top = 6.0
+offset_right = 1269.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "L'àngel Gabriel no pot seguir degut 
+al seu cansament, torna-ho a intentar!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(575.75, 324)
+scale = Vector2(1.8036, 1.8)
+texture = ExtResource("1_3k68v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = -4.0
+offset_top = 575.0
+offset_right = 586.0
+offset_bottom = 669.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Tornar a intentar"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 579.0
+offset_top = 575.0
+offset_right = 1155.0
+offset_bottom = 653.0
+
+[node name="Button2" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Tornar al menú"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Button2" to="." method="_on_button_2_pressed"]

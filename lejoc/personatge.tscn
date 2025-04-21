@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0bf13hh61by0"]
+
+[ext_resource type="Script" uid="uid://cfnm1uokf3k2h" path="res://personatge.gd" id="1_5loqs"]
+[ext_resource type="Texture2D" uid="uid://brqvp6i28kwlj" path="res://àngel pmg.png" id="2_r8tuf"]
+[ext_resource type="PackedScene" uid="uid://ccxy6cmtiyeny" path="res://perdut.tscn" id="3_r8tuf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fy3p2"]
+size = Vector2(33.5, 75)
+
+[node name="Personatge" type="CharacterBody2D"]
+position = Vector2(577, 586)
+script = ExtResource("1_5loqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fy3p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.159468, 0.154485)
+texture = ExtResource("2_r8tuf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -504.0
+offset_top = -324.0
+offset_right = -489.0
+offset_bottom = -296.0
+theme_override_font_sizes/font_size = 20
+text = "40.0"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -506.0
+offset_bottom = -296.0
+theme_override_font_sizes/font_size = 20
+text = "Temps:"
+
+[node name="perdut" parent="." instance=ExtResource("3_r8tuf")]

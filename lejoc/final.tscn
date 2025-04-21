@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxj3hbqtf65wm"]
+
+[ext_resource type="Texture2D" uid="uid://cjw46hlg7s841" path="res://ilustracion-monte-olimpo-grandes-templos-criaturas-miticas-estetica-moderna_818261-5658.jpg" id="1_h0aww"]
+[ext_resource type="Script" uid="uid://cwjb2fxsopq56" path="res://final.gd" id="1_tvybu"]
+
+[node name="final" type="Node2D"]
+position = Vector2(0, -2)
+script = ExtResource("1_tvybu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 21.0
+offset_top = 53.0
+offset_right = 1163.0
+offset_bottom = 545.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+text = "     Enhorabona, has ajudat a 
+l'àngel Gabriel a tornar al paradís 
+      després de la seva caiguda,
+           en menys de 40 segons,
+               ets tot un àngel!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(575.75, 325.625)
+scale = Vector2(1.55743, 1.31592)
+texture = ExtResource("1_h0aww")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_top = 575.0
+offset_right = 1152.0
+offset_bottom = 693.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "TORNAR AL MENÚ D'INICI"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
